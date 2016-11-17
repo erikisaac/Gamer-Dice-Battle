@@ -3,13 +3,74 @@ h1 {
 }
 
 table {
+	width: 600px;
 	border: 1px solid black;
+	padding: 10px;
+	background-color: black;
 }
 
 td {
-	border: 1px solid black;	
+	border: 1px solid black;
+	vertical-align: top;
+	padding: 10px;
+	text-align: center;
+}
+
+#player1Box {
+	background-color: lightgray;
+	border-radius: 15px;
+}
+
+#player1InfoDisplay {
+	background-color: #b3b3b3;
+	height: 25px;
+	padding: 5px;
+}
+
+#player2Box {
+	background-color: lightgray;
+	border-radius: 15px;
+}
+
+#player2InfoDisplay {
+	background-color: #b3b3b3;
+	height: 25px;
+	padding: 5px;
+}
+
+#combatBox {
+	background-color: gray;
+	border-radius: 15px;
+}
+
+#winBox {
+	height: 100px;
+	font-weight: bold;
+	font-size: 30px;
+	color: white;
+}
+
+#player1RoleDisplay {
+	background-color: lightgray;
+}
+
+#player2RoleDisplay {
+	background-color: lightgray;
+}
+
+h3 {
+	text-align: center;
 }
 
 button {
-	
+	width: 125px;
+	height: 25px;
+	margin: 3px;
+	border-radius: 10px;
+	background-color: #ff9933;
+	font-size: 16px;
 }
+
+
+
+

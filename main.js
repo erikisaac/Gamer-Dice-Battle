@@ -92,6 +92,9 @@ var player2Roll;
 
 function startGame() {
 	console.log("Game Started!");
+	document.getElementById("combatInfoDisplay").innerHTML = "Combat begins!";
+	document.getElementById("winBox").innerHTML = "";
+	// combatInfoDisplay
 	player1TotalPoints = 0;
 	player2TotalPoints = 0;
 	setDiceToTrue();
@@ -196,7 +199,7 @@ function startCombat() {
 	document.getElementById("player1RoleDisplay").innerHTML = "Player 1 Roles: " + player1CombatRole;
 	document.getElementById("player2RoleDisplay").innerHTML = "Player 2 Roles: " + player2CombatRole;
 	determineWhoWinsRound();
-	document.getElementById("combatInfoDisplay").innerHTML = "Player " + roundWinner + " wins!";
+	document.getElementById("combatInfoDisplay").innerHTML = "Player " + roundWinner + " wins the round!";
 };
 
 var roundWinner;
@@ -229,7 +232,7 @@ function determineIfThereIsANextRound() {
 	currentRound += 1;
 	setWhoGoesFirst();
 	console.log("Round: " + currentRound);
-	if (currentRound <= 5) {
+	if (currentRound <= 4) {
 		roundPhase = 0
 		startNewRound();
 	} else {
@@ -239,6 +242,18 @@ function determineIfThereIsANextRound() {
 
 function gameOver() {
 	console.log("Game Over!");
+	if (player1TotalPoints > player2TotalPoints) {
+		console.log("Player 1 wins!");
+		document.getElementById("winBox").innerHTML = "PLAYER ONE WINS!!!";
+	}
+	if (player2TotalPoints > player1TotalPoints) {
+		console.log("Player 2 wins!");
+		document.getElementById("winBox").innerHTML = "PLAYER TWO WINS!!!";
+	};
+	if (player1TotalPoints === player2TotalPoints) {
+		console.log("It's a tie!");
+		document.getElementById("winBox").innerHTML = "Tie Game!";
+	};
 };
 
 var player1CombatRole;
