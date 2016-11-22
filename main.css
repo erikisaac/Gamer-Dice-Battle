@@ -7,6 +7,11 @@ h1 {
 	color: Red;
 }
 
+p {
+	width: 600px;
+	margin: auto; 
+}
+
 table {
 	margin: auto;
 	width: 600px;
